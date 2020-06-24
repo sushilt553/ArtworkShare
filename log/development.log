@@ -2194,3 +2194,214 @@ Processing by UsersController#update as */*
 Completed 200 OK in 98ms (Views: 0.4ms | ActiveRecord: 65.5ms)
 
 
+Started PATCH "/artworks" for ::1 at 2020-06-24 14:51:05 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/artworks"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/artworks" for ::1 at 2020-06-24 14:52:02 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/artworks"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/artworks" for ::1 at 2020-06-24 14:52:06 -0400
+Processing by ArtworksController#index as */*
+  Parameters: {"user"=>{"username"=>"sushilt553"}}
+  [1m[36mArtwork Load (22.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  ↳ app/controllers/artworks_controller.rb:5
+Completed 200 OK in 111ms (Views: 15.8ms | ActiveRecord: 78.4ms)
+
+
+Started POST "/artworks" for ::1 at 2020-06-24 14:52:49 -0400
+Processing by ArtworksController#create as */*
+  Parameters: {"artwork"=>{"title"=>"\"Avrakadabra\"", "artist_id"=>"2"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mArtwork Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."artist_id" = $2 LIMIT $3[0m  [["title", "\"Avrakadabra\""], ["artist_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artworks_controller.rb:21
+Completed 422 Unprocessable Entity in 102ms (Views: 0.4ms | ActiveRecord: 41.1ms)
+
+
+Started POST "/artworks" for ::1 at 2020-06-24 14:53:07 -0400
+Processing by ArtworksController#create as */*
+  Parameters: {"artwork"=>{"title"=>"Avrakadabra", "artist_id"=>"2", "image_url"=>"www.avra.com"}}
+Unpermitted parameter: :image_url
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mArtwork Exists (4.8ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."artist_id" = $2 LIMIT $3[0m  [["title", "Avrakadabra"], ["artist_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artworks_controller.rb:21
+Completed 422 Unprocessable Entity in 17ms (Views: 0.3ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/artworks" for ::1 at 2020-06-24 14:53:11 -0400
+Processing by ArtworksController#create as */*
+  Parameters: {"artwork"=>{"title"=>"Avrakadabra", "artist_id"=>"2", "image_url"=>"www.avra.com"}}
+Unpermitted parameter: :image_url
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mArtwork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."artist_id" = $2 LIMIT $3[0m  [["title", "Avrakadabra"], ["artist_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artworks_controller.rb:21
+Completed 422 Unprocessable Entity in 21ms (Views: 0.4ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/artworks" for ::1 at 2020-06-24 14:53:29 -0400
+Processing by ArtworksController#create as */*
+  Parameters: {"artwork"=>{"title"=>"Avrakadabra", "artist_id"=>"2", "image_url"=>"www.avra.com"}}
+  [1m[35m (25.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mArtwork Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."artist_id" = $2 LIMIT $3[0m  [["title", "Avrakadabra"], ["artist_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[36mArtwork Create (2.9ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "image_url", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avrakadabra"], ["image_url", "www.avra.com"], ["artist_id", 2], ["created_at", "2020-06-24 18:53:29.367301"], ["updated_at", "2020-06-24 18:53:29.367301"]]
+  ↳ app/controllers/artworks_controller.rb:21
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artworks_controller.rb:21
+Completed 200 OK in 148ms (Views: 0.8ms | ActiveRecord: 98.6ms)
+
+
+Started PATCH "/artworks/3" for ::1 at 2020-06-24 14:53:43 -0400
+Processing by ArtworksController#update as */*
+  Parameters: {"artwork"=>{"title"=>"Avrakadabra", "artist_id"=>"2", "image_url"=>"www.avrakadabra.com"}, "id"=>"3"}
+  [1m[36mArtwork Load (2.3ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:29
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:31
+  [1m[36mArtwork Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."id" != $2 AND "artworks"."artist_id" = $3 LIMIT $4[0m  [["title", "Avrakadabra"], ["id", 3], ["artist_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:31
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:31
+  [1m[36mArtwork Update (139.6ms)[0m  [1m[33mUPDATE "artworks" SET "image_url" = $1, "updated_at" = $2 WHERE "artworks"."id" = $3[0m  [["image_url", "www.avrakadabra.com"], ["updated_at", "2020-06-24 18:53:43.875988"], ["id", 3]]
+  ↳ app/controllers/artworks_controller.rb:31
+  [1m[35m (36.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artworks_controller.rb:31
+Completed 200 OK in 200ms (Views: 0.7ms | ActiveRecord: 183.9ms)
+
+
+Started GET "/artworks/3" for ::1 at 2020-06-24 14:53:55 -0400
+Processing by ArtworksController#show as */*
+  Parameters: {"artwork"=>{"title"=>"Avrakadabra", "artist_id"=>"2", "image_url"=>"www.avrakadabra.com"}, "id"=>"3"}
+  [1m[36mArtwork Load (3.1ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:9
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/artworks/3" for ::1 at 2020-06-24 14:54:02 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/artworks/3"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/artworks/3" for ::1 at 2020-06-24 14:54:29 -0400
+Processing by ArtworksController#destroy as */*
+  Parameters: {"artwork"=>{"title"=>"Avrakadabra", "artist_id"=>"2", "image_url"=>"www.avrakadabra.com"}, "id"=>"3"}
+  [1m[36mArtwork Load (0.9ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:39
+  [1m[35m (20.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:41
+  [1m[36mArtworkShare Load (1.1ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1[0m  [["artwork_id", 3]]
+  ↳ app/controllers/artworks_controller.rb:41
+  [1m[36mArtwork Destroy (0.8ms)[0m  [1m[31mDELETE FROM "artworks" WHERE "artworks"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/artworks_controller.rb:41
+  [1m[35m (44.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artworks_controller.rb:41
+Completed 200 OK in 180ms (Views: 0.3ms | ActiveRecord: 126.0ms)
+
+
+Started GET "/artworks/3" for ::1 at 2020-06-24 14:54:38 -0400
+Processing by ArtworksController#show as */*
+  Parameters: {"artwork"=>{"title"=>"Avrakadabra", "artist_id"=>"2", "image_url"=>"www.avrakadabra.com"}, "id"=>"3"}
+  [1m[36mArtwork Load (43.0ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:9
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 43.0ms)
+
+
