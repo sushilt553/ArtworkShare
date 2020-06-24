@@ -3662,3 +3662,184 @@ Migrating to CreateLikes (20200624203420)
   ↳ bin/rails:9
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started POST "/artworks/1/like" for ::1 at 2020-06-24 17:05:24 -0400
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sushilthapa/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artworks/1/like" for ::1 at 2020-06-24 17:05:40 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user"=>{"user_id"=>"1"}, "id"=>"1"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:06:06 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:09:34 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:52
+  [1m[36mLike Exists (32.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."likeable_id" = $2 AND "likes"."likeable_type" = $3 LIMIT $4[0m  [["user_id", 1], ["likeable_id", 1], ["likeable_type", 0], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:52
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artworks_controller.rb:52
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 85.2ms)
+
+
+  
+NoMethodError (undefined method `constantize' for 0:Integer):
+  
+app/controllers/artworks_controller.rb:52:in `like'
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:10:37 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:11:04 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 43ms (Views: 0.5ms | ActiveRecord: 26.0ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:11:57 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 53ms (Views: 0.4ms | ActiveRecord: 33.8ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:11:58 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:12:00 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:12:02 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:12:03 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:12:03 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeLIkeable (20200624211234)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (32.3ms)[0m  [1m[35mALTER TABLE "likes" DROP COLUMN "likeable_type"[0m
+  ↳ db/migrate/20200624211234_change_l_ikeable.rb:3
+  [1m[35m (5.9ms)[0m  [1m[35mALTER TABLE "likes" ADD "likeable_type" character varying[0m
+  ↳ db/migrate/20200624211234_change_l_ikeable.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200624211234"]]
+  ↳ bin/rails:9
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (18.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddIndex (20200624211345)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_likeable_id_and_likeable_type" ON "likes"  ("likeable_id", "likeable_type")[0m
+  ↳ db/migrate/20200624211345_add_index.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_likes_on_likeable_id_and_likeable_type_and_user_id" ON "likes"  ("likeable_id", "likeable_type", "user_id")[0m
+  ↳ db/migrate/20200624211345_add_index.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200624211345"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:14:42 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sushilthapa/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+Completed 200 OK in 44ms (Views: 0.7ms | ActiveRecord: 24.6ms)
+
+
+Started POST "/artworks/1/like?user_id=1" for ::1 at 2020-06-24 17:15:00 -0400
+Processing by ArtworksController#like as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35m (19.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:51
+  [1m[36mLike Exists (7.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."likeable_id" = $2 AND "likes"."likeable_type" = $3 LIMIT $4[0m  [["user_id", 1], ["likeable_id", 1], ["likeable_type", "Artwork"], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:51
+  [1m[36mArtwork Load (1.8ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:51
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:51
+  [1m[36mLike Create (27.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_id", "created_at", "updated_at", "likeable_type") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["likeable_id", 1], ["created_at", "2020-06-24 21:15:00.452251"], ["updated_at", "2020-06-24 21:15:00.452251"], ["likeable_type", "Artwork"]]
+  ↳ app/controllers/artworks_controller.rb:51
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artworks_controller.rb:51
+Completed 500 Internal Server Error in 439ms (ActiveRecord: 159.0ms)
+
+
+  
+NoMethodError (undefined method `json' for #<ArtworksController:0x00007fb402d07150>
+Did you mean?  JSON):
+  
+app/controllers/artworks_controller.rb:52:in `like'
+  [1m[36mLike Load (1.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+Started POST "/artworks/1/unlike?user_id=1" for ::1 at 2020-06-24 17:15:43 -0400
+Processing by ArtworksController#unlike as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."likeable_id" = $2 AND "likes"."likeable_type" = $3 LIMIT $4[0m  [["user_id", 1], ["likeable_id", 1], ["likeable_type", "Artwork"], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:59
+  [1m[35m (22.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:62
+  [1m[36mLike Destroy (1.5ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/artworks_controller.rb:62
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artworks_controller.rb:62
+Completed 200 OK in 81ms (Views: 0.5ms | ActiveRecord: 60.6ms)
+
+
+  [1m[36mLike Load (1.9ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
