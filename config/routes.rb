@@ -7,12 +7,23 @@ Rails.application.routes.draw do
 
   resources :artworks, only: [:create, :new, :update, :destroy, :show, :edit] do
     resources :comments, only: [:index]
+    member do 
+      post '/like', to: 'artworks#like', as: 'like'
+      post '/unlike', to: 'artworks#unlike', as: 'unlike'
+    end
   end
 
-  resources :comments, only: [:create, :destroy]
+  
+
+  resources :comments, only: [:create, :destroy] do
+    member do
+      post '/like', to: 'comments#like', as: 'like'
+      post '/unlike', to: 'comments#unlike', as: 'unlike'
+    end
+  end
   # get '/users', to: 'users#index'
   # post '/users', to: 'users#create'
-  # get "/users/new", to: 'users#new'
+  # get '/users/new', to: 'users#new'
   # get '/users/:id', to: 'users#show'
   # get '/users/:id/edit', to: 'users#edit'
   # patch '/users/:id', to: 'users#update'
