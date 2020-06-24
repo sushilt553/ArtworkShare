@@ -3482,3 +3482,156 @@ Processing by CommentsController#index as */*
 Completed 200 OK in 31ms (Views: 3.5ms | ActiveRecord: 25.7ms)
 
 
+Started GET "/users?username=sushil" for ::1 at 2020-06-24 16:07:24 -0400
+Processing by UsersController#index as */*
+  Parameters: {"username"=>"sushil"}
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?query=sushil" for ::1 at 2020-06-24 16:07:34 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"sushil"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?query=sushil" for ::1 at 2020-06-24 16:07:52 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"sushil"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?query=sushil" for ::1 at 2020-06-24 16:10:22 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"sushil"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "%sushil%"]]
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 40ms (Views: 3.3ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/users?query=sushil" for ::1 at 2020-06-24 16:10:24 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"sushil"}
+  [1m[36mUser Load (22.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "%sushil%"]]
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 26ms (Views: 2.0ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/users?query=sushil" for ::1 at 2020-06-24 16:13:03 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"sushil"}
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `LIKE' for #<UsersController:0x00007fb3ff227c10>):
+  
+app/controllers/users_controller.rb:5:in `index'
+Started GET "/users?query=sushil" for ::1 at 2020-06-24 16:13:35 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"sushil"}
+  [1m[36mUser Load (38.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username LIKE '%sushil%')[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 99ms (Views: 6.7ms | ActiveRecord: 81.9ms)
+
+
+Started GET "/users?query=alina" for ::1 at 2020-06-24 16:13:42 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"alina"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username LIKE '%alina%')[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:13:45 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"asdjflsdf"}
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username LIKE '%asdjflsdf%')[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:13:48 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"asdjflsdf"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username LIKE '%asdjflsdf%')[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:14:43 -0400
+  
+SyntaxError (/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:9: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+        if (users) {
+                   ^
+/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:11: syntax error, unexpected '}', expecting keyword_end
+        }else{
+        ^
+/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:13: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:60: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/users_controller.rb:11: syntax error, unexpected '}', expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected '}', expecting keyword_end
+app/controllers/users_controller.rb:60: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:14:46 -0400
+  
+SyntaxError (/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:9: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+        if (users) {
+                   ^
+/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:11: syntax error, unexpected '}', expecting keyword_end
+        }else{
+        ^
+/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:13: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:60: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/users_controller.rb:11: syntax error, unexpected '}', expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected '}', expecting keyword_end
+app/controllers/users_controller.rb:60: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:15:05 -0400
+  
+SyntaxError (/Users/sushilthapa/Desktop/ArtShare/app/controllers/users_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:15:20 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"asdjflsdf"}
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `json' for #<UsersController:0x00007fb3ff3fb7a8>
+Did you mean?  JSON):
+  
+app/controllers/users_controller.rb:10:in `index'
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:15:23 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"asdjflsdf"}
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `json' for #<UsersController:0x00007fb4002b0870>
+Did you mean?  JSON):
+  
+app/controllers/users_controller.rb:10:in `index'
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:15:41 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"asdjflsdf"}
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username LIKE '%asdjflsdf%')[0m
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 39ms (Views: 2.6ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/users?query=asdjflsdf" for ::1 at 2020-06-24 16:15:57 -0400
+Processing by UsersController#index as */*
+  Parameters: {"query"=>"asdjflsdf"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username LIKE '%asdjflsdf%')[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 9.8ms)
+
+
